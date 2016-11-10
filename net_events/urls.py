@@ -4,5 +4,5 @@ from events import urls as events_urls
 
 
 urlpatterns = [
-    url(r'^$', include(events_urls)),
+    url(r'^', include(events_urls)),
 ]
