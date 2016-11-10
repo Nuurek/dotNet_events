@@ -1,1 +1,119 @@
 {% extends 'base.html' %}
+
+{% load static %}
+
+{% block stylesheets %}
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static "js/jquery-3.1.1.min.js" %}"></script>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="window-container" id="events-window">
+        <div class="top-row">
+            <div class="window-title">NajbliższeSpotkania.cs</div>
+            <div class="buttons">
+                <div class="button grey"></div>
+                <div class="button grey"></div>
+                <div class="button red"></div>
+            </div>
+        </div>
+        <div class="window">
+            <div class="events">
+                <div class="event">
+                    <div class="column">
+                        <div class="row">
+                            putNET.JuniorNET(
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="row">
+                            <span class="tanned">"Moja pierwsza strona WWW na Azure"</span>
+                            <span>,</span>
+                        </div>
+                        <div class="row">
+                            <span class="tanned">"Wojciech Agaciński"</span>
+                            <span>, </span>
+                            <span class="blue">new </span>
+                            <span class="seagreen">DateTime</span>
+                            <span>(</span>
+                            <span class="yellow">2016</span>
+                            <span>, </span>
+                            <span class="yellow">11</span>
+                            <span>, </span>
+                            <span class="yellow">7</span>
+                            <span>));</span>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="column">
+                        <div class="row">
+                            putNET.Innovations(
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="row">
+                            <span class="tanned">"Ewolucja CPP - Rozwój kompilatorów MS VCpp, clang, gcc"</span>
+                            <span>,</span>
+                        </div>
+                        <div class="row">
+                            <span class="tanned">"Przemysław Walkowiak"</span>
+                            <span>, </span>
+                            <span class="blue">new </span>
+                            <span class="seagreen">DateTime</span>
+                            <span>(</span>
+                            <span class="yellow">2016</span>
+                            <span>, </span>
+                            <span class="yellow">11</span>
+                            <span>, </span>
+                            <span class="yellow">8</span>
+                            <span>));</span>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+                <div class="event">
+                    <div class="column">
+                        <div class="row">
+                            putNET.Innovations(
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="row">
+                            <span class="tanned">"Behind Big Data - Microsoft Tech Talk"</span>
+                            <span>,</span>
+                        </div>
+                        <div class="row">
+                            <span class="tanned">"Sofiane Hassaine"</span>
+                            <span>, </span>
+                            <span class="blue">new </span>
+                            <span class="seagreen">DateTime</span>
+                            <span>(</span>
+                            <span class="yellow">2016</span>
+                            <span>, </span>
+                            <span class="yellow">11</span>
+                            <span>, </span>
+                            <span class="yellow">9</span>
+                            <span>, </span>
+                            <span class="yellow">17</span>
+                            <span>, </span>
+                            <span class="yellow">00</span>
+                            <span>));</span>
+                        </div>
+                        <br />
+                    </div>
+                </div>
+                <div class="info">
+                    <span>// default 13CW 18:45</span><br />
+                    <span>// ! ! ! Behind Big Data rozpoczyna się o godzinie 17:00 ! ! !</span><br />
+                    <span>// rejestracja na wydarzenia przez meetup.com</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
