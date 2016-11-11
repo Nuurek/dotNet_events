@@ -7,18 +7,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>.NET events</title>
-    <link rel="stylesheet" href="{% sass_src "css/site.scss" %}" media="screen">
-    <link rel="stylesheet" href="{% sass_src "css/consolas-font.scss" %}" media="screen">
+    <link rel="stylesheet" href="{% sass_src 'css/site.scss' %}" media="screen" />
+    <link rel="stylesheet" href="{% sass_src 'css/consolas-font.scss' %}" media="screen" />
     {% block stylesheets %} {% endblock %}
 </head>
 
 <body>
     <div class="site-wrapper">
+        <div class="navbar-container">
+            <nav class="navbar">
+                <a class="navbar-brand" href="#">.NET events</a>
+                <ul class="nav-items">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">.NET Groups</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <div class="site-wrapper-inner">
             {% block content %} {% endblock %}
         </div>
     </div>
-    <script scr="{% static "js/bootstrap.min.js" %}"></script>
+    <script scr="{% static 'js/bootstrap.min.js' %}"></script>
     {% block scripts %} {% endblock %}
 </body>
 
