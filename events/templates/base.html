@@ -15,20 +15,24 @@
 <body>
     <div class="site-wrapper">
         <div class="navbar-container">
-            <nav class="navbar">
-                <a class="navbar-brand" href="#">.NET events</a>
-                <ul class="nav-items">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Features</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">.NET Groups</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-            </nav>
+            <div class="navbar-inner">
+                <nav class="navbar">
+                    <div class="brand">
+                        <a href="#">.NET events</a>
+                    </div>
+                    <div class="nav-items">
+                        <div class="nav-item active">
+                            <a href="#">Features</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#">.NET Groups</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#">Contact</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
         </div>
         <div class="site-wrapper-inner">
             {% block content %} {% endblock %}
