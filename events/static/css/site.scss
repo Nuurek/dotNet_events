@@ -1,21 +1,20 @@
-$dark-gray: #2b2b2b;
-$gray: #4d4d4d;
-$light-gray: #a9b7c6;
-$super-light-gray: #fefefe;
-$primary-red: #750000;
-$secondary-red: #752626;
-$primary-tanned: #d6967a;
+@import 'base';
 
-@mixin box-shadow($value) {
-    -webkit-box-shadow: $value;
-    -moz-box-shadow: $value;
-    box-shadow: $value;
+@font-face {
+    font-family: "Segoe UI";
+    src: url(../fonts/SegoeUI.ttf);
+}
+
+@font-face {
+    font-family: "Segoe UI";
+    src: url(../fonts/SegoeUIB.ttf);
+    font-weight: bold;
 }
 
 html, body {
     height: 100%;
     font-size: 1rem;
-    font-family: "Consolas";
+    font-family: "Segoe UI";
 }
 
 body {
@@ -47,6 +46,9 @@ body {
                 align-items: center;
                 flex-direction: row;
                 text-align: center;
+                font-weight: bold;
+                background-color: $gray;
+                border-radius: 10px;
 
                 .brand {
                     width: 30%;
@@ -54,6 +56,7 @@ body {
                     a {
                         color: $primary-red;
                         font-size: 3rem;
+                        line-height: 2rem;
                     }
                 }
 
@@ -63,7 +66,7 @@ body {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    justify-content: center;
+                    justify-content: flex-end;
 
                     .nav-item {
                         padding: 0 1rem;
@@ -93,115 +96,6 @@ body {
 
                 a {
                     text-decoration: none;
-                }
-            }
-        }
-    }
-
-    .site-wrapper-inner {
-
-        .schedule-container {
-            display: flex;
-            justify-content: space-around;
-
-            .window-container {
-                position: relative;
-
-                .top-row {
-                    position: absolute;
-                    left: 32px;
-                    right: 16px;
-                    height: 48px;
-                    display: flex;
-                    justify-content: space-between;
-                    z-index: 1;
-
-                    .window-title {
-                        font-size: 25px;
-                        color: $light-gray;
-                        align-self: center;
-                        z-index: 1;
-                    }
-
-                    .buttons {
-                        display: flex;
-                        flex-direction: row;
-                        width: 88px;
-                        justify-content: space-between;
-
-                        .button {
-                            width: 26px;
-                            height: 26px;
-                            align-self: center;
-                        }
-
-                        .grey {
-                            background: $light-gray;
-                        }
-
-                        .red {
-                            background: $secondary-red;
-                        }
-                    }
-                }
-
-                .window {
-                    background-color: $dark-gray;
-                    border: 16px solid $gray;
-                    border-top-width: 48px;
-                    border-radius: 8px;
-                    box-sizing: border-box;
-                    z-index: -1;
-
-                    .events {
-                        display: inline-flex;
-                        flex-direction: column;
-                        padding: 25px 20px;
-
-                        > * {
-                            font-size: 30px;
-                            color: $super-light-gray;
-                        }
-
-                        .event {
-                            display: inline-flex;
-
-                            .ide-column {
-                                display: flex;
-                                flex-direction: column;
-                            }
-
-                            .ide-row {
-                                display: flex;
-                                flex-direction: row;
-
-                                span {
-                                    white-space: pre;
-
-                                    &.tanned {
-                                        color: $primary-tanned;
-                                    }
-
-                                    &.blue {
-                                        color: #5198d5;
-                                    }
-
-                                    &.seagreen {
-                                        color: #43bda3;
-                                    }
-
-                                    &.yellow {
-                                        color: #d4d7a4;
-                                    }
-                                }
-                            }
-                        }
-
-                        .info {
-                            font-size: 26px;
-                            color: #5d8949;
-                        }
-                    }
                 }
             }
         }

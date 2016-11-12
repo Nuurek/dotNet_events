@@ -1,0 +1,13 @@
+$dark-gray: #2b2b2b;
+$gray: #4d4d4d;
+$light-gray: #a9b7c6;
+$super-light-gray: #fefefe;
+$primary-red: #750000;
+$secondary-red: #752626;
+$primary-tanned: #d6967a;
+
+@mixin box-shadow($value) {
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    box-shadow: $value;
+}
