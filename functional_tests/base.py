@@ -10,7 +10,7 @@ class FunctionalTest(StaticLiveServerTestCase):
         cls.server_url = 'localhost:8000'
 
     def setUp(self):
-        self.browser = webdriver.Firefox()
+        self.browser = webdriver.Chrome()
 
     def tearDown(self):
         self.browser.refresh()

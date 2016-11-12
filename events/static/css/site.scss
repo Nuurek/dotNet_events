@@ -41,7 +41,7 @@ body {
             align-items: center;
 
             .navbar {
-                width: 80%;
+                width: 95%;
                 padding: 1.2vh 0;
                 display: flex;
                 justify-content: space-around;
@@ -53,7 +53,7 @@ body {
                 border-radius: 10px;
 
                 .brand {
-                    width: 30%;
+                    width: 20%;
 
                     a {
                         color: $primary-red;
@@ -111,7 +111,7 @@ body {
         flex: 1 1 auto;
 
         .site-wrapper-inner {
-            margin: 1rem auto 0 auto;
+            margin: 0 auto;
         }
     }
 }

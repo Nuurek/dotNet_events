@@ -1,7 +1,7 @@
 from .base import FunctionalTest
 
 PAGE_TITLE = '.NET events'
-
+NEW_SCHEDULE_BUTTON_TEXT = 'Create new schedule'
 
 class NewVisitorTest(FunctionalTest):
 
@@ -13,10 +13,17 @@ class NewVisitorTest(FunctionalTest):
 
         # He notices the page title and header mention .NET events
         self.assertIn(PAGE_TITLE, self.browser.title)
-        header_text = self.browser.find_element_by_tag_name('h1').text
-        self.assertIn(PAGE_TITLE, header_text)
+        brand_text = self.browser.find_element_by_css_selector('.brand').text
+        self.assertIn(PAGE_TITLE, brand_text)
 
-        # There is also a button for logging in.
+        # There's also navbar on the top of the site
+        navbar_items = self.browser.find_elements_by_css_selector('.nav-item')
+        self.assertNotEqual(len(navbar_items), 0)
 
-        # And the largest from them all: schedule showing all upcoming events
-        # for one of the .NET groups.
+        # And the largest from all elements:
+        # schedule showing all upcoming events for one of the .NET groups.
+        schedule = self.browser.find_element_by_id('events-window')
+
+        # Beneath the schedule there's a button located.
+        new_button = self.browser.find_element_by_id('new-schedule-button')
+        self.assertEqual(NEW_SCHEDULE_BUTTON_TEXT, new_button.text)
