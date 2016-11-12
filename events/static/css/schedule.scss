@@ -21,15 +21,15 @@
 
         .top-row {
             position: absolute;
-            left: 32px;
-            right: 16px;
-            height: 48px;
+            left: 2vw;
+            right: 1vw;
+            height: 7vh;
             display: flex;
             justify-content: space-between;
             z-index: 1;
 
             .window-title {
-                font-size: 25px;
+                font-size: 1.6vw;
                 color: $light-gray;
                 align-self: center;
                 z-index: 1;
@@ -38,12 +38,11 @@
             .buttons {
                 display: flex;
                 flex-direction: row;
-                width: 88px;
+                width: 5.5vw;
                 justify-content: space-between;
 
                 .button {
-                    width: 26px;
-                    height: 26px;
+                    padding: 0.8vw;
                     align-self: center;
                 }
 
@@ -59,19 +58,19 @@
 
         .window {
             background-color: $dark-gray;
-            border: 16px solid $gray;
-            border-top-width: 48px;
-            border-radius: 8px;
+            border: 1vw solid $gray;
+            border-top-width: 7vh;
+            border-radius: 0.5vw;
             box-sizing: border-box;
             z-index: -1;
 
             .events {
                 display: inline-flex;
                 flex-direction: column;
-                padding: 25px 20px;
+                padding: 3.65vh 1.25vw;
 
                 > * {
-                    font-size: 30px;
+                    font-size: 1.875vw;
                     color: $super-light-gray;
                 }
 
@@ -110,7 +109,7 @@
                 }
 
                 .info {
-                    font-size: 26px;
+                    font-size: 1.625vw;
                     color: #5d8949;
                 }
             }
