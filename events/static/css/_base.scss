@@ -11,3 +11,10 @@ $primary-tanned: #d6967a;
     -moz-box-shadow: $value;
     box-shadow: $value;
 }
+
+@mixin user-select($value) {
+    -webkit-user-select: $value;
+    -moz-user-select: $value;
+    -ms-user-select: $value;
+    user-select: $value;
+}
