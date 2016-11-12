@@ -8,109 +8,117 @@
 .site-wrapper {
 .site-wrapper-inner {
 
-.schedule-container {
+section {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
-    > * {
-        font-family: "Consolas";
-    }
+    .schedule-container {
+        display: flex;
+        justify-content: space-around;
+        margin: 1vh 0;
 
-    .window-container {
-        position: relative;
-
-        .top-row {
-            position: absolute;
-            left: 2vw;
-            right: 1vw;
-            height: 7vh;
-            display: flex;
-            justify-content: space-between;
-            z-index: 1;
-
-            .window-title {
-                font-size: 1.6vw;
-                color: $light-gray;
-                align-self: center;
-                z-index: 1;
-            }
-
-            .buttons {
-                display: flex;
-                flex-direction: row;
-                width: 5.5vw;
-                justify-content: space-between;
-
-                .button {
-                    padding: 0.8vw;
-                    align-self: center;
-                }
-
-                .grey {
-                    background: $light-gray;
-                }
-
-                .red {
-                    background: $secondary-red;
-                }
-            }
+        > * {
+            font-family: "Consolas";
         }
 
-        .window {
-            background-color: $dark-gray;
-            border: 1vw solid $gray;
-            border-top-width: 7vh;
-            border-radius: 0.5vw;
-            box-sizing: border-box;
-            z-index: -1;
+        .window-container {
+            position: relative;
 
-            .events {
-                display: inline-flex;
-                flex-direction: column;
-                padding: 3.65vh 1.25vw;
+            .top-row {
+                position: absolute;
+                left: 2vw;
+                right: 1vw;
+                height: 7vh;
+                display: flex;
+                justify-content: space-between;
+                z-index: 1;
 
-                > * {
-                    font-size: 1.875vw;
-                    color: $super-light-gray;
+                .window-title {
+                    font-size: 1.6vw;
+                    color: $light-gray;
+                    align-self: center;
+                    z-index: 1;
                 }
 
-                .event {
-                    display: inline-flex;
+                .buttons {
+                    display: flex;
+                    flex-direction: row;
+                    width: 5.5vw;
+                    justify-content: space-between;
 
-                    .ide-column {
-                        display: flex;
-                        flex-direction: column;
+                    .button {
+                        padding: 0.8vw;
+                        align-self: center;
                     }
 
-                    .ide-row {
-                        display: flex;
-                        flex-direction: row;
+                    .grey {
+                        background: $light-gray;
+                    }
 
-                        span {
-                            white-space: pre;
+                    .red {
+                        background: $secondary-red;
+                    }
+                }
+            }
 
-                            &.tanned {
-                                color: $primary-tanned;
-                            }
+            .window {
+                background-color: $dark-gray;
+                border: 1vw solid $gray;
+                border-top-width: 7vh;
+                border-radius: 0.5vw;
+                box-sizing: border-box;
+                z-index: -1;
 
-                            &.blue {
-                                color: #5198d5;
-                            }
+                .events {
+                    display: inline-flex;
+                    flex-direction: column;
+                    padding: 3.65vh 1.25vw;
 
-                            &.seagreen {
-                                color: #43bda3;
-                            }
+                    > * {
+                        font-size: 1.875vw;
+                        color: $super-light-gray;
+                    }
 
-                            &.yellow {
-                                color: #d4d7a4;
+                    .event {
+                        display: inline-flex;
+
+                        .ide-column {
+                            display: flex;
+                            flex-direction: column;
+                        }
+
+                        .ide-row {
+                            display: flex;
+                            flex-direction: row;
+
+                            span {
+                                white-space: pre;
+
+                                &.tanned {
+                                    color: $primary-tanned;
+                                }
+
+                                &.blue {
+                                    color: #5198d5;
+                                }
+
+                                &.seagreen {
+                                    color: #43bda3;
+                                }
+
+                                &.yellow {
+                                    color: #d4d7a4;
+                                }
                             }
                         }
                     }
-                }
 
-                .info {
-                    font-size: 1.625vw;
-                    color: #5d8949;
+                    .info {
+                        font-size: 1.625vw;
+                        color: #5d8949;
+                    }
                 }
             }
         }

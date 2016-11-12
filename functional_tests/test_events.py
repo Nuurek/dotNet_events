@@ -25,5 +25,5 @@ class NewVisitorTest(FunctionalTest):
         schedule = self.browser.find_element_by_id('events-window')
 
         # Beneath the schedule there's a button located.
-        new_button = self.browser.find_element_by_id('new-schedule-button')
+        new_button = self.browser.find_element_by_name('new-schedule-button')
         self.assertEqual(NEW_SCHEDULE_BUTTON_TEXT, new_button.text)
