@@ -34,7 +34,9 @@ class NewVisitorTest(FunctionalTest):
         # This times he would like to actually create new schedule
         # so he clicked the button.
         new_button = self.browser.find_element_by_name('new-schedule-button')
+        print(new_button)
+        new_button.click()
 
         # When he clicked it, he is taken to a new url
         new_schedule_url = self.browser.current_url
-        self.assertRegex(new_schedule_url, '/schedule/.+')
+        self.assertRegex(new_schedule_url, '/schedules/.+')
