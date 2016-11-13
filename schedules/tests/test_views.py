@@ -1,5 +1,5 @@
 from django.test import TestCase
-from events.models import Schedule
+from schedules.models import Schedule
 
 
 class HomePageTest(TestCase):
@@ -10,16 +10,16 @@ class HomePageTest(TestCase):
 
     def test_new_schedule_button_rediects_to_new_schedule(self):
         response = self.client.post(
-            '/schedule/new',
+            '/schedules/new',
         )
         new_schedule = Schedule.objects.first()
-        self.assertRedirects(response, '/schedule/{}'.format(new_schedule.id))
+        self.assertRedirects(response, '/schedules/{}'.format(new_schedule.id))
 
 
 class ScheduleViewTest(TestCase):
 
     def test_uses_schedule_template(self):
         schedule = Schedule.objects.create()
-        schedule_url = '/schedule/{}'.format(schedule.id)
+        schedule_url = '/schedules/{}'.format(schedule.id)
         response = self.client.get(schedule_url)
         self.assertTemplateUsed(response, 'schedule.html')

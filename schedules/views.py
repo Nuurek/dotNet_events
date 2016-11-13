@@ -1,5 +1,5 @@
 from django.views.generic import TemplateView, RedirectView
-from events.models import Schedule
+from schedules.models import Schedule
 
 
 class HomePageView(TemplateView):

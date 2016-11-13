@@ -1,5 +1,5 @@
 from django.test import TestCase
-from events.models import Schedule
+from schedules.models import Schedule
 
 
 class ScheduleModelTest(TestCase):
@@ -8,5 +8,5 @@ class ScheduleModelTest(TestCase):
         new_schedule = Schedule.objects.create()
         self.assertEqual(
             new_schedule.get_absolute_url(),
-            '/schedule/{}'.format(new_schedule.id)
+            '/schedules/{}'.format(new_schedule.id)
         )

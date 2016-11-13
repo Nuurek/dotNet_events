@@ -21,7 +21,7 @@ INSTALLED_APPS = [
 
     # Custom apps
     'functional_tests',
-    'events',
+    'schedules',
 ]
 
 MIDDLEWARE = [
