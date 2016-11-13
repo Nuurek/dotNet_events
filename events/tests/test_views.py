@@ -10,10 +10,10 @@ class HomePageTest(TestCase):
 
     def test_new_schedule_button_rediects_to_new_schedule(self):
         response = self.client.post(
-            'schedule/new',
+            '/schedule/new',
         )
         new_schedule = Schedule.objects.first()
-        self.assertRedirects(response, 'schedule/{}'.format(new_schedule.id))
+        self.assertRedirects(response, '/schedule/{}'.format(new_schedule.id))
 
 
 class ScheduleViewTest(TestCase):
