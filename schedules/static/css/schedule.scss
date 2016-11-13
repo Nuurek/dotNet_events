@@ -82,7 +82,8 @@ section {
                     }
 
                     .event {
-                        display: inline-flex;
+                        display: flex;
+                        margin-bottom: 2.25vw;
 
                         .ide-column {
                             display: flex;
